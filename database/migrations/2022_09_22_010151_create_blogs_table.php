@@ -1,10 +1,8 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
-return new class extends Migration
+class CreateBlogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 255)->nullable();
-            $table->text('body')->nullable();
+            $table->string('title');
+            $table->text('description');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -30,4 +27,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('blogs');
     }
-};
+}

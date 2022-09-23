@@ -1,6 +1,14 @@
+After login:
+Get into the Postman app’s Authorization tab, select ‘Bearer Token’ from the 
+Type dropdown, then add the auth token that you got when logged into the app.
 
-http://127.0.0.1:8000/blogs
+http://localhost:8000/api/blogs (get)
 
-http://127.0.0.1:8000/blogs/1
+http://localhost:8000/api/blogs/{id}
+http://localhost:8000/api/blogs (get)
 
-http://127.0.0.1:8000/blogs/4
+http://localhost:8000/api/blogs (post)
+
+http://localhost:8000/api/blogs/{id} (put)
+
+http://localhost:8000/api/blogs/{id} (delete)
